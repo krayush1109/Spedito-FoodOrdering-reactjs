@@ -1,8 +1,14 @@
 import React from 'react'
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
 
 const App = () => {
+
+
   return (
-    <div className='my-box text-4xl text-teal-500' >App</div>
+    <>
+      <Navbar />
+    </>
   )
 }
 
