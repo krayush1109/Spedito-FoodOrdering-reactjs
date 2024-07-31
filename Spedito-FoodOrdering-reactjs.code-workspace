@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"hide-files.files": [
+			".eslintrc.cjs",
+			".gitignore",
+			"vite.config.js",
+			"postcss.config.js",
+			"package-lock.json",
+			"tailwind.config.js",
+			"Spedito-FoodOrdering-reactjs.code-workspace"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+
+.navbar-link {
+    @apply px-4 hover:text-gray-400 cursor-pointer font-bold;
+}
+
+/* / ----------- \ */
+.active-link {
+    @apply text-lime-500 hover:text-lime-400;
+}
+
+:root{
+    --nav-px: 14rem;
+}
+
+/* \ ----------- / */

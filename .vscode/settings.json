@@ -10,7 +10,21 @@
     "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/React-JS.code-workspace": true
+    "**/React-JS.code-workspace": true,
+    ".eslintrc.cjs": true,
+    ".gitignore": true,
+    "vite.config.js": true,
+    "postcss.config.js": true,
+    "package-lock.json": true,
+    "tailwind.config.js": true,
+    "Spedito-FoodOrdering-reactjs.code-workspace": true
   },
-  "hide-files.files": []
+  "hide-files.files": [
+    ".eslintrc.cjs",
+    ".gitignore",
+    "vite.config.js",
+    "postcss.config.js",
+    "package-lock.json",
+    "tailwind.config.js"
+  ]
 }
