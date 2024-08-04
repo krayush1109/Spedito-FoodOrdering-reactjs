@@ -1,2 +1,9 @@
 @import './style/tailwind.css';
 @import './style/navbar.css';
+
+@import './style/testing.css';
+@import './style/heroSlider.css';
+
+.not-found{
+    @apply uppercase text-8xl text-red-500 font-extrabold text-center; 
+}

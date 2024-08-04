@@ -1,0 +1,12 @@
+.test1{
+    @apply bg-red-200;
+}
+.test2{
+    @apply bg-teal-100;
+}
+.test3{
+    @apply bg-amber-100;
+}
+.test4{
+    @apply bg-blue-100;
+}

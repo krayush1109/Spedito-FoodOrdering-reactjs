@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'KaushanFont';
+    /* Name you want to use in CSS */
+    src: url('/fonts/KaushanScript-Regular.woff') format('woff');
+    /* Path to your .woff file */
+    font-weight: normal;
+    /* Optional, specify weight */
+    font-style: normal;
+    /* Optional, specify style */
+}
+
+.my-slide{
+    @apply test2 h-[80vh] w-full ;
+}
+
+/* Swiper JS Customization */
+/* styles.css or SwiperComponent.module.css */
+.swiper-pagination-bullet {
+    background: gray;
+    /* Color of inactive bullets */
+    width: 36px;
+    /* Width of the bullet */
+    height: 4px;
+    /* Height of the bullet */
+    border-radius: 30%;
+    /* Round shape */
+    opacity: 1;
+    /* Fully opaque */
+
+    position: relative;
+    bottom: 5rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: lawngreen;
+    /* Color of the active bullet */
+}
+
+/* Optional: Style pagination container */
+.swiper-pagination {
+    bottom: 10px;
+    /* Position of pagination */
+}
+
+/* ######### Font #########  */
+.font-1{
+    @i
+}

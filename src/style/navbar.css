@@ -1,11 +1,16 @@
 
 .navbar-link {
-    @apply px-4 hover:text-gray-400 cursor-pointer font-bold;
+    @apply px-4 hover:text-gray-200 cursor-pointer font-bold;
 }
 
 /* / ----------- \ */
 .active-link {
     @apply text-lime-500 hover:text-lime-400;
+}
+
+/* Navbar Bottom -> Rhs ->  */
+.other-link-img{
+    @apply w-6 cursor-pointer;
 }
 
 :root{
