@@ -15,15 +15,15 @@ import catalogsData from '../../public/img/heroSlider/catalogsData';
 const HeroSlider = () => {
     return (
         <>
-            <div className='w-[95%] left-12  mx-auto h-screen relative'>
+            <div className='w-[95%] left-12  mx-auto relative'>
                 <Swiper
                     modules={[Pagination, Autoplay, EffectCards, EffectCoverflow, EffectFade, EffectCreative, EffectFlip]}
                     effect="cards"
                     autoplay={{ delay: 3000 }}
                     spaceBetween={0}
                     slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     loop={true}
                     grabCursor={true}
                     pagination={{ clickable: true }}
@@ -45,8 +45,8 @@ const HeroSlider = () => {
                     <div className='flex space-x-10 justify-center w-full h-32'>
                         {catalogsData.map((catalog) => {
                             return (
-                                <div key={catalog.name} className='h-28 w-24 flex flex-col justify-between items-center'>
-                                    <img className='h-16 ' src={catalog.url} alt="NA" />
+                                <div key={catalog.name} className='h-28 w-24 flex flex-col justify-between items-center cursor-pointer '>
+                                    <img className='h-16 hover:animate-spin duration-1000' src={catalog.url} alt="NA" />
                                     <p className='text-white font-semibold' >{catalog.name.toUpperCase()}</p>
                                 </div>
                             )

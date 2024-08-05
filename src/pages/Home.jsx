@@ -1,8 +1,13 @@
 import React from 'react'
+import HeroSlider from '../components/HeroSlider'
+import OrderOnline from './OrderOnline'
 
-const Home = () => {
+const Home = () => {  
   return (
-    <div>Home</div>
+    <>
+      <HeroSlider />
+      <OrderOnline />     
+    </>
   )
 }
 

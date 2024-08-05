@@ -40,7 +40,7 @@ const Navbar = () => {
                         <div className='navt-t-center h-60 w-60 translate-y-5'>
                             <div className='h-full w-full  border-8 rounded-full border-gray-100 shadow-md hover:shadow-lg hover:-translate-y-1 duration-500 cursor-pointer  ' >
                                 <div className='h-full w-full bg-lime-500 hover:bg-green-500 duration-1000  rounded-full flex justify-center items-center  ' >
-                                    <img src="/img/nav/logo.png" alt="NA" srcset="" />
+                                    <img src="/img/nav/logo.png" alt="NA" />
                                 </div>
                             </div>
                         </div>
@@ -88,9 +88,9 @@ const Navbar = () => {
                         </div>
                         <div className="nav-b-rhs flex">
                             <div className='other-links flex justify-center items-center  gap-4 w-40'>
-                                <img className='other-link-img' src="/img/nav/search.svg" alt="" srcset="" />
-                                <img className='other-link-img' src="/img/nav/avatar.svg" alt="" srcset="" />
-                                <img className='other-link-img' src="/img/nav/cart.svg" alt="" srcset="" />
+                                <img className='other-link-img' src="/img/nav/search.svg" alt="" />
+                                <img className='other-link-img' src="/img/nav/avatar.svg" alt="" />
+                                <img className='other-link-img' src="/img/nav/cart.svg" alt="" />
                             </div>
 
                             <button type="button" className=' flex gap-3 px-5 py-3 bg-red-600 hover:bg-lime-500 text-white ease duration-300 uppercase font-serif '>
