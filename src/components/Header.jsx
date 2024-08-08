@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link, NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Header = () => {
     return (
         <div className="navbar-container">
             <div className='nav-top'>
@@ -19,7 +19,7 @@ const Navbar = () => {
                                 Home
                             </NavLink>
                             <NavLink
-                                to='/unknown/1'
+                                to='/order-online'
                                 className={(navData) =>
                                     `${navData.isActive ? 'active-link' : ''} navbar-link`
                                     // `${navData.isActive ? console.log(navData) : console.log(navData)} navbar-link`
@@ -106,4 +106,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Header

@@ -1,0 +1,7 @@
+.category-subNav{
+    @apply list-none text-lg font-semibold w-48 text-center py-3 rounded-full cursor-pointer
+}
+
+.cat-subNav-active{
+    @apply text-white bg-lime-500;
+}

@@ -1,8 +1,16 @@
-@import './style/tailwind.css';
-@import './style/navbar.css';
+@import './styles/tailwind.css';
+@import './styles/header.css';
 
-@import './style/testing.css';
-@import './style/heroSlider.css';
+@import './styles/testing.css';
+@import './styles/heroSlider.css';
+@import './styles/orderOnline.css';
+
+@import 'https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap';
+.cutive-mono-regular {
+    font-family: "CutiveMono", monospace;
+    font-weight: 800;
+    font-style: normal;
+}
 
 .not-found{
     @apply uppercase text-8xl text-red-500 font-extrabold text-center; 

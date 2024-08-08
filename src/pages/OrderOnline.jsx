@@ -1,34 +1,56 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import RestaurantCard from "../components/RestaurantCard";
-import RestaurantList from '../data/RestautantList.json'
-
-const SWIGGY_BASE_IMG_LINK = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+// import RestaurantMockList from '../utils/RestaurantMockList.json'
+import { FRENCH_FRIES, SWIGGY_API_LINK, SWIGGY_BASE_IMG_LINK, ZIG_ZAG_IMG } from "../utils/constants";
+import RestaurantCardShimmer from "../components/RestaurantCardShimmer";
+import CategoryNavbar from "../components/CategoryNavbar";
+import { formatFetchedList } from "../utils/helperFunction";
 
 const OrderOnline = () => {
-    const resList = RestaurantList.map((item) => ({
-        image: SWIGGY_BASE_IMG_LINK + item.info.cloudinaryImageId,
-        restaurantName: item.info.name,
-        rating: item.info.avgRating,
-        description: item.info.locality,
-        cuisines: item.info.cuisines,
-        deliveryTime: item.info.sla.deliveryTime
-    }));
+    const [renderResList, setRenderResList] = useState([]);
+    const [RestaurantList, setRestaurantList] = useState([]);
+
+    const fetchApi = async () => {
+        try {
+            const response = await fetch(SWIGGY_API_LINK);
+            const json = await response.json();
+            const listfetched = await json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+            const formattedList = await formatFetchedList(listfetched)
+            setRestaurantList(formattedList)
+            setRenderResList(formattedList)
+        } catch (error) {
+            console.error("Failed to fetch restaurants:", error);
+        }
+    }
+
+    useEffect(() => {
+        fetchApi()
+    }, [])
 
     return (
         <>
-            <div className=" text-center justify-center py-6" >
-                <img className="mx-auto" src="https://pro-theme.com/html/spedito/assets/img/decor/french-fries.png" alt="" />
-                
-                <h1 className='text-4xl my-6 font-[KaushanFont]'>Our Special Deals</h1>
-                <img className="mx-auto" src="/img/special-deal-img.png" alt="" />
+            <div className="text-center flex justify-around items-center pt-10 " >
+   
+                <div>
+                    <img className="mx-auto" src={FRENCH_FRIES} alt="" />
+                    <h1 className='text-4xl my-6 font-[KaushanFont]'>Our Special Deals</h1>
+                    <img className="mx-auto" src={ZIG_ZAG_IMG} alt="" />
+                </div>
+             
             </div>
 
+            {/* #### CATEGORY NAVBAR #### */}
+            <CategoryNavbar data={{ renderResList, setRenderResList, RestaurantList }} />
+
             <div className="restaurant-container flex gap-8 justify-center flex-wrap" >
-                {resList.map((data, i) => {
-                    return (
-                        <RestaurantCard key={i} data={data} />
-                    )
-                })}
+                {renderResList.length === 0 ?
+                    <RestaurantCardShimmer /> :
+                    renderResList.map((data, i) => {
+                        return (
+                            <RestaurantCard key={data.id} data={data} />
+                        )
+                    })
+                }
             </div>
         </>
     );

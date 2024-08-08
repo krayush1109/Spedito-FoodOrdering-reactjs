@@ -1,13 +1,11 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
-import { Autoplay, Pagination, EffectFade, EffectCreative, EffectFlip,EffectCoverflow, EffectCards } from 'swiper/modules'; // Import Autoplay module
+import { Autoplay, Pagination, EffectFade, EffectFlip, EffectCards } from 'swiper/modules'; // Import Autoplay module
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import 'swiper/css/effect-creative';
 import 'swiper/css/effect-flip';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-cards';
 
 import catalogsData from '../../public/img/heroSlider/catalogsData';
@@ -15,9 +13,9 @@ import catalogsData from '../../public/img/heroSlider/catalogsData';
 const HeroSlider = () => {
     return (
         <>
-            <div className='w-[95%] left-12  mx-auto relative'>
+            <div className='w-[95%] left-12 mx-auto relative'>                
                 <Swiper
-                    modules={[Pagination, Autoplay, EffectCards, EffectCoverflow, EffectFade, EffectCreative, EffectFlip]}
+                    modules={[Pagination, Autoplay, EffectCards, EffectFade, EffectFlip]}
                     effect="cards"
                     autoplay={{ delay: 3000 }}
                     spaceBetween={0}
@@ -54,8 +52,8 @@ const HeroSlider = () => {
                     </div>
 
                     <div className='absolute top-80 text-center text-white'>
-                        <h1 className='text-7xl font-[KaushanFont]'>The Pizza</h1>
-                        <p className='text-2xl mt-8' >Delicious and Tasty Pizzas by Expert Chefs</p>
+                        <h1 className='text-7xl font-[KaushanFont]'>Order Today, While It's Hot!</h1>
+                        <p className='text-2xl font-semibold font-mono mt-8' >Eat Delicious and Tasty Food With Real Flavours</p>
                     </div>
 
                 </div>
