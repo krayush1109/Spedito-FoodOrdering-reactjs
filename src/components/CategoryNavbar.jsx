@@ -7,8 +7,7 @@ const CategoryNavbar = (props) => {
     const { renderResList, setRenderResList, RestaurantList } = props.data;
     const [activeCat, setActiveCat] = useState(CATEGORIES_LIST[0]);
 
-    const handleCat = () => {
-        // setActiveCat(categorie);
+    const handleCategory = () => {        
         switch (activeCat) {
             case CATEGORIES_LIST[0]: {
                 setRenderResList(RestaurantList);
@@ -32,7 +31,7 @@ const CategoryNavbar = (props) => {
     }
 
     useEffect(() => {
-        handleCat();
+        handleCategory();
     }, [activeCat])
 
     return (

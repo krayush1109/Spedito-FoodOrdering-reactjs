@@ -9,6 +9,7 @@ import { formatFetchedList } from "../utils/helperFunction";
 const OrderOnline = () => {
     const [renderResList, setRenderResList] = useState([]);
     const [RestaurantList, setRestaurantList] = useState([]);
+    const [searchTxt, setSearchTxt] = useState("");
 
     const fetchApi = async () => {
         try {
@@ -23,6 +24,14 @@ const OrderOnline = () => {
         }
     }
 
+    const handleSearch = (e) => {
+        const txt = e.target.value;
+        setSearchTxt(txt);
+        
+        const filterSearch = RestaurantList.filter((r) => (r.restaurantName.toLowerCase()).includes(txt.toLowerCase()));
+        setRenderResList(filterSearch)
+    }
+
     useEffect(() => {
         fetchApi()
     }, [])
@@ -30,13 +39,15 @@ const OrderOnline = () => {
     return (
         <>
             <div className="text-center flex justify-around items-center pt-10 " >
-   
+                <div></div>
                 <div>
                     <img className="mx-auto" src={FRENCH_FRIES} alt="" />
                     <h1 className='text-4xl my-6 font-[KaushanFont]'>Our Special Deals</h1>
                     <img className="mx-auto" src={ZIG_ZAG_IMG} alt="" />
                 </div>
-             
+                <div>
+                    <input type="search" value={searchTxt} onChange={(e) => handleSearch(e)} placeholder="Search..." className="px-2 py-1 border-b-2 border-lime-300 outline-none text-lg" />
+                </div>
             </div>
 
             {/* #### CATEGORY NAVBAR #### */}
